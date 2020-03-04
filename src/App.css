@@ -1,38 +1,353 @@
-.App {
+/* font-family: 'Poppins', sans-serif;
+font-family: 'Playfair Display', serif;
+font-family: 'Lato', sans-serif;
+font-family: 'Work Sans', sans-serif; */
+/* font-family: 'Shadows Into Light', cursive; */
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+nav {
+  height: 45px;
+  background-color: royalblue;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+nav .print-btn {
+  width: 100px;
+  font-family: "Work Sans", sans-serif;
+  display: inline-block;
+  margin-left: 40px;
+  margin-top: 7px;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  color: white;
+  background-color: royalblue;
+  border: dashed 1px white;
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+}
+nav .print-btn:hover {
+  border-style: dotted;
+  background-color: rgb(13, 66, 228);
+  color: whitesmoke;
+}
+.page {
+  width: 860px;
+  height: 1112px;
+  margin: auto;
+  border: 1px solid black;
+  box-shadow: 0px 0px 15px grey;
+}
+.header {
+  margin: auto;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  width: 800px;
+  height: 300px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.header textarea {
+  font-family: "Work Sans", sans-serif;
+  font-size: 10pt;
+}
+.item-header textarea {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#invoice-data {
+  margin: auto;
+  padding: 10px 0px 0px 10px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.company-info,
+.customer-info,
+.invoice-info {
+  margin: auto;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.company-info textarea,
+.customer-info textarea,
+.invoice-info textarea {
+  width: 377px;
+  height: 134px;
+  padding: 10px 0px 0px 10px;
+}
+.head-box textarea {
+  background-color: #e6e8e9;
+  border-radius: 10px;
+  outline: none;
+}
+.logo-wrap {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  margin-left: 40px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.img-wrap {
+  height: 120px;
+  width: 315px;
+  border: 1px dashed black;
+  background-image: url(./images/clickToUplodImage.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+ol {
+  margin: 0px;
+  margin-top: 3px;
+  margin-left: 20px;
+  width: 840px;
+}
+li {
+  display: list-item;
+}
+li > input,
+.sum > textarea,
+.item-header > textarea {
+  resize: none;
+  box-shadow: none;
+  outline: none;
+  font-family: "Work Sans", sans-serif;
+  font-size: 14px;
+  font-weight: lighter;
+  height: 24px;
+}
+li > input {
+  border: none;
+  margin: 0px;
+}
+li > input:focus {
+  border: 1px solid #1ca7ec;
+}
+::marker {
+  box-sizing: unset;
+  float: right;
+}
+.sum {
+  float: right;
+  margin-top: 10px;
+  margin-right: 39px;
+}
+#sum-value,
+#add-tax-value,
+#tax-value,
+#no-tax-value {
+  border: 0.5px solid #1ca7ec;
+  background-color: #e9f7ff;
+  width: 130px;
+  text-align: right;
+  padding-right: 9px;
+  padding-top: 5px;
+}
+#noTax,
+#tax,
+#add-tax,
+#sum-total {
+  border: none;
+  width: 120px;
+  padding-top: 5px;
+}
+li {
+  vertical-align: bottom;
+  font-family: "Work Sans", sans-serif;
+  font-size: 14px;
+}
+.remove-button {
+  width: 22px;
+  height: 22px;
+  background-color: white;
+  color: orangered;
+  border: dashed 1px orangered;
+  border-radius: 11px;
+  margin-left: 5px;
+  transition: 0.4s;
+  cursor: pointer;
+  outline: none;
+}
+.remove-button:hover {
+  border-style: dotted;
+  font-weight: bold;
+  color: rgb(255, 0, 0);
+}
+.cell-desc {
+  display: inline-block;
+  width: 310px;
+}
+.cell-qty {
+  width: 110px;
+  text-align: center;
+}
+.cell-tax {
+  display: inline-block;
+  text-align: center;
+  width: 80px;
+}
+.cell-unit-price,
+.cell-total-price {
+  display: inline-block;
+  text-align: right;
+  padding-right: 10px;
+  width: 130px;
+}
+.item-header {
+  margin-left: 32px;
+  margin-right: 12px;
+  text-align: center;
+  padding: 0px;
+}
+.item-header > textarea {
+  border: none;
+}
+.add-button {
+  width: 100px;
+  font-family: "Work Sans", sans-serif;
+  display: inline-block;
+  margin-left: 40px;
+  margin-top: 5px;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  color: #67c5ff;
+  background-color: white;
+  border: dashed 1px #67c5ff;
+  border-radius: 3px;
+  transition: 0.4s;
+  outline: none;
+  cursor: pointer;
+}
+.add-button:hover {
+  border-style: dotted;
+  color: #679efd;
+}
+.first-line {
+  border: 0.5px solid gray;
+  width: 780px;
+  margin: 0px;
+  margin-top: 3px;
+  margin-left: 40px;
+}
+.second-line {
+  border: 0.5px solid gray;
+  width: 780px;
+  margin: 0px;
+  margin-top: 8px;
+  margin-left: 40px;
+  margin-bottom: 2px;
+}
+
+.text-terms {
+  font-family: "Work Sans", sans-serif;
+  font-size: 11pt;
+  margin-top: 10px;
+  margin-left: 40px;
+  width: 400px;
+}
+.text-payment {
+  font-family: "Work Sans", sans-serif;
+  font-size: 11pt;
+  margin-top: 40px;
+  margin-left: 40px;
+}
+.footer {
+  height: 45px;
+  background-color: royalblue;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-top: 9px;
+}
+.footer > label {
+  font-family: inherit;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.footer a {
+  color: blanchedalmond;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.settings {
+  position: absolute;
+  margin-left: 5px;
+}
+.settings div {
+  height: 30px;
+  display: inline-block;
+}
+.settings button {
+  display: hide;
+  font-family: "Work Sans", sans-serif;
+  margin-bottom: 2px;
+  margin-left: 2px;
+  text-decoration: none;
+  color: #67c5ff;
+  background-color: white;
+  border: dashed 1px #67c5ff;
+  border-radius: 3px;
+  transition: 0.4s;
+  outline: none;
+  cursor: pointer;
+}
+.settings input {
+  width: 100px;
+  background-color: white;
+  border: dashed 1px #67c5ff;
+  border-radius: 3px;
+  transition: 0.4s;
+}
+/* @page {
+  size: A4;
+  margin: 0px;
+} */
+@media print {
+  body {
+    margin: 0px;
+    padding: 0px !important;
+    background-color: seagreen;
   }
-  to {
-    transform: rotate(360deg);
+  .page {
+    margin: 0px !important;
+    border-color: white;
+    box-shadow: none;
+  }
+  .text-payment {
+    margin-top: 70px;
+  }
+  li {
+    width: 800px;
+    margin: 0px;
+  }
+  nav,
+  .footer,
+  .add-button,
+  .remove-button {
+    display: none;
+  }
+  .img-wrap {
+    border: none;
+  }
+  .settings div {
+    display: none;
+  }
+  textarea {
+    resize: none;
+  }
+  .text-terms,
+  .text-payment {
+    border: none;
+    resize: none;
+  }
+  #sum-value,
+  #add-tax-value,
+  #tax-value,
+  #no-tax-value {
+    border: 0.5px solid #e9e8e8;
+    background-color: #f7f3f3;
+    background-blend-mode: lighten;
+    margin: 2px;
+  }
+  #noTax,
+  #tax,
+  #add-tax,
+  #sum-total {
+    margin: 2px;
   }
 }
