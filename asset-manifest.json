@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/invoiceSPA/static/css/main.9789f62d.chunk.css",
+    "main.js": "/invoiceSPA/static/js/main.b0b21f9b.chunk.js",
+    "main.js.map": "/invoiceSPA/static/js/main.b0b21f9b.chunk.js.map",
+    "runtime-main.js": "/invoiceSPA/static/js/runtime-main.0ada0512.js",
+    "runtime-main.js.map": "/invoiceSPA/static/js/runtime-main.0ada0512.js.map",
+    "static/js/2.87dd672b.chunk.js": "/invoiceSPA/static/js/2.87dd672b.chunk.js",
+    "static/js/2.87dd672b.chunk.js.map": "/invoiceSPA/static/js/2.87dd672b.chunk.js.map",
+    "index.html": "/invoiceSPA/index.html",
+    "precache-manifest.bd27e3632f47d4102815e68515864627.js": "/invoiceSPA/precache-manifest.bd27e3632f47d4102815e68515864627.js",
+    "service-worker.js": "/invoiceSPA/service-worker.js",
+    "static/css/main.9789f62d.chunk.css.map": "/invoiceSPA/static/css/main.9789f62d.chunk.css.map",
+    "static/js/2.87dd672b.chunk.js.LICENSE.txt": "/invoiceSPA/static/js/2.87dd672b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0ada0512.js",
+    "static/js/2.87dd672b.chunk.js",
+    "static/css/main.9789f62d.chunk.css",
+    "static/js/main.b0b21f9b.chunk.js"
+  ]
+}
