@@ -1,8 +1,6 @@
 # invoiceSPA
 Simple invoice single page app.
 
-https://alexxgh.github.io/invoiceSPA/
-
 Version 1.0.0.
 
 Simple Invoice application in React.js\
